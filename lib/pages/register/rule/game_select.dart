@@ -32,8 +32,20 @@ class _GameSelectState extends State<GameSelect> {
         centerTitle: true,
         leading: FlatButton(
           child: Icon(Icons.close, color: Colors.white),
-          onPressed: () =>
-              Navigator.of(context).pop(),
+          onPressed: () => AlertDialog(
+            // title: Text("警告"),
+            content: Text("全ての設定を放棄して最初の画面に戻ります．\nよろしいですか?"),
+            actions: <Widget>[
+              FlatButton(
+                child: Text("Cancel"),
+                onPressed: () => Navigator.pop(context), 
+              ),
+              FlatButton(
+                child: Text("OK"),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
+            ],
+          ),
         ),
       ),
       body: Column(
@@ -111,8 +123,8 @@ class _GameSelectState extends State<GameSelect> {
                                     name: "/register/score_setting"),
                                 builder: (context) {
                                   return ScoreSetting(
-                                      title: widget.title,
-                                      params: params,
+                                    title: widget.title,
+                                    params: params,
                                   );
                                 },
                                 fullscreenDialog: true,

@@ -8,7 +8,6 @@ class ScoreSetting extends StatefulWidget {
 
   final String title;
   var params;
-  // final int pNum;
 
   @override
   _ScoreSettingState createState() => _ScoreSettingState();

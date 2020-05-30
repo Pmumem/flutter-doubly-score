@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './pages/register/game_select.dart';
+import './pages/register/rule/game_select.dart';
 
 void main() {
   runApp(MyApp());
